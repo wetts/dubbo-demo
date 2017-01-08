@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class TestService {
 
-    @Reference(version="1.0.0")
+    @Reference(version="1.0.0", loadbalance = "roundrobin")
     private DubboService dubboService;
 
     public String hello(String name) {

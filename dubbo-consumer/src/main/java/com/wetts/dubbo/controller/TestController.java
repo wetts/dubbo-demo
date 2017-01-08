@@ -13,7 +13,7 @@ public class TestController {
     @Resource
     private TestService testService;
 
-    @RequestMapping(value = "/hello/{name}")
+    @RequestMapping(value = "/hello/{name}", produces = "text/html;charset=UTF-8")
     public String hello(@PathVariable String name) {
         return testService.hello(name);
     }
